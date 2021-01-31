@@ -220,7 +220,6 @@ static const struct drm_display_mode s6e3fa3_mode = {
 	.vsync_start = 1920 + 18,
 	.vsync_end = 1920 + 18 + 2,
 	.vtotal = 1920 + 18 + 2 + 4,
-	.vrefresh = 60,
 	.width_mm = 68,
 	.height_mm = 122,
 };
@@ -347,11 +346,7 @@ static int s6e3fa3_probe(struct mipi_dsi_device *dsi)
 	drm_panel_init(&ctx->panel, dev, &s6e3fa3_panel_funcs,
 		       DRM_MODE_CONNECTOR_DSI);
 
-	ret = drm_panel_add(&ctx->panel);
-	if (ret < 0) {
-		dev_err(dev, "Failed to add panel: %d\n", ret);
-		return ret;
-	}
+	drm_panel_add(&ctx->panel);
 
 	ret = mipi_dsi_attach(dsi);
 	if (ret < 0) {
