@@ -20,3 +20,9 @@
 		opp-supported-hw = <0x01>;
 	};
 };
+
+&dsi0 {
+	panel: panel@0 {
+		compatible = "samsung,s6e3fa5";
+	};
+};
