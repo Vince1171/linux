@@ -222,6 +222,10 @@ snd-soc-tas6424-objs := tas6424.o
 snd-soc-tda7419-objs := tda7419.o
 snd-soc-tas2770-objs := tas2770.o
 snd-soc-tfa9879-objs := tfa9879.o
+snd-soc-tfa98xx-objs += tfa/tfa98xx.o
+snd-soc-tfa98xx-objs += tfa/tfa_container.o
+snd-soc-tfa98xx-objs += tfa/tfa_dsp.o
+snd-soc-tfa98xx-objs += tfa/tfa_init.o
 snd-soc-tlv320aic23-objs := tlv320aic23.o
 snd-soc-tlv320aic23-i2c-objs := tlv320aic23-i2c.o
 snd-soc-tlv320aic23-spi-objs := tlv320aic23-spi.o
@@ -303,6 +307,7 @@ snd-soc-wm-hubs-objs := wm_hubs.o
 snd-soc-wsa881x-objs := wsa881x.o
 snd-soc-zl38060-objs := zl38060.o
 snd-soc-zx-aud96p22-objs := zx_aud96p22.o
+
 # Amp
 snd-soc-max9877-objs := max9877.o
 snd-soc-max98504-objs := max98504.o
@@ -538,6 +543,7 @@ obj-$(CONFIG_SND_SOC_TAS6424)	+= snd-soc-tas6424.o
 obj-$(CONFIG_SND_SOC_TDA7419)	+= snd-soc-tda7419.o
 obj-$(CONFIG_SND_SOC_TAS2770) += snd-soc-tas2770.o
 obj-$(CONFIG_SND_SOC_TFA9879)	+= snd-soc-tfa9879.o
+obj-$(CONFIG_SND_SOC_TFA98XX) += snd-soc-tfa98xx.o
 obj-$(CONFIG_SND_SOC_TLV320AIC23)	+= snd-soc-tlv320aic23.o
 obj-$(CONFIG_SND_SOC_TLV320AIC23_I2C)	+= snd-soc-tlv320aic23-i2c.o
 obj-$(CONFIG_SND_SOC_TLV320AIC23_SPI)	+= snd-soc-tlv320aic23-spi.o
