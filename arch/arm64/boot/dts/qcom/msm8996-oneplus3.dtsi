@@ -170,7 +170,7 @@
 	status = "okay";
 
 	tfa9890_amp: tfa9890@36 {
-		compatible = "nxp,tfa9890";
+		compatible = "tfa,tfa9890";
 		reg = <0x36>;
 		#sound-dai-cells = <0>;
 
